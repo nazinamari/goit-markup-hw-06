@@ -490,8 +490,14 @@ body {
   padding-bottom: 60px;
 }
 
-.footer-left {
-  margin-right: 70px;
+.footer-adress-wrap {
+  width: 231px;
+  flex-shrink: 0;
+}
+
+.footer-social-wrap {
+  padding-left: 70px;
+  padding-top: 12px;
 }
 
 .footer-logo {
@@ -540,7 +546,7 @@ body {
   display: flex;
 }
 
-.footer-join {
+.footer-social-title {
   margin-bottom: 20px;
   color: var(--main-title-color);
   font-weight: 600;
@@ -575,18 +581,22 @@ body {
   margin-left: 10px;
 }
 
-.subscription {
+.footer-subscription-wrap {
+  padding-left: 93px;
+  padding-top: 12px;
+}
+
+.footer-subscription-form {
   display: flex;
-  align-items: flex-end;
-  margin-bottom: 94px;
+  flex-wrap: wrap;
 }
 .sub-box {
   display: flex;
   flex-direction: column;
-  margin-left: 93px;
 }
 
-.sub-input-title {
+.sub-title {
+  width: 100%;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.14;
@@ -607,7 +617,7 @@ body {
 }
 
 .sub-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 200px;
@@ -786,9 +796,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: opacity 250ms, visibility 250ms,
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1) rotate(0) translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
 }
 
@@ -810,6 +819,14 @@ body {
   display: block;
   align-items: center;
   justify-content: center;
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+  fill: var(--accent-color);
+}
+
 }
 
 .modal-title {
