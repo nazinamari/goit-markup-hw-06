@@ -1,1 +1,1 @@
-# goit-markup-hw-05
+# Web Studio (Home work 6)
